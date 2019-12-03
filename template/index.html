@@ -12,5 +12,8 @@
       <input placeholder="Post Content" name="post" />
       <input type="submit" value="Submit" />
     </form>
+    {% for posts in posts %}
+    <div>{{ post[1] + ': ' + post[2] }}</div>
+    {% endfor %}
   </body>
 </html>
