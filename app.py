@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from flask_cors import CORS
+from models import create_post, get_posts
 
 app = Flask(__name__)
 
@@ -20,3 +21,7 @@ def index():
     posts = get_posts()
 
     return render_template('index.html', posts=posts)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
